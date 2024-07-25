@@ -1,0 +1,52 @@
+---
+import { Image } from "astro:assets";
+import question from "../assets/icons/question.svg";
+import whitePaw from "../assets/icons/white-paw.svg";
+import FqaAccordion from "./FqaAccordion.astro";
+import bottomLine from "../assets/images/bottomLine1.png";
+---
+
+<div>
+  <div class="w-full bg-[#FFE7E7] relative p-4 overflow-x-hidden">
+    <Image
+      src={whitePaw}
+      width={200}
+      height={200}
+      alt={"Vetor de uma pata de gato branca"}
+      class={"absolute -left-5 -top-5 -rotate-[240deg]"}
+    />
+    <Image
+      src={whitePaw}
+      width={200}
+      height={200}
+      alt={"Vetor de uma pata de gato branca"}
+      class={"absolute -right-5 -bottom-5 -rotate-[40deg]"}
+    />
+    <div class="flex flex-col justify-start items-center">
+      <Image src={question} width={32} height={32} alt={"Icone FQA"} />
+      <h1 class="font-logo text-2xl">Perguntas Frequentes</h1>
+      <div class="flex flex-col gap-4 items-center w-1/2">
+        <FqaAccordion
+          question="Como posso adotar um gatinho?"
+          answer="Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi fugit sequi quibusdam eaque voluptatibus optio velit tenetur ratione fuga amet mollitia cumque minima quo sint dolorum, possimus error iste voluptatum!"
+        />
+        <FqaAccordion
+          question="As adoções são gratuitas?"
+          answer="Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi fugit sequi quibusdam eaque voluptatibus optio velit tenetur ratione fuga amet mollitia cumque minima quo sint dolorum, possimus error iste voluptatum!"
+        />
+        <FqaAccordion
+          question="Os gatos para adoção são castrados?"
+          answer="Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi fugit sequi quibusdam eaque voluptatibus optio velit tenetur ratione fuga amet mollitia cumque minima quo sint dolorum, possimus error iste voluptatum!"
+        />
+        <FqaAccordion
+          question="O que preciso saber antes de adotar um gato?"
+          answer="Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi fugit sequi quibusdam eaque voluptatibus optio velit tenetur ratione fuga amet mollitia cumque minima quo sint dolorum, possimus error iste voluptatum!"
+        />
+        <FqaAccordion
+          question="Como fazer a adaptação em casa de um gato adotado?"
+          answer="Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi fugit sequi quibusdam eaque voluptatibus optio velit tenetur ratione fuga amet mollitia cumque minima quo sint dolorum, possimus error iste voluptatum!"
+        />
+      </div>
+    </div>
+  </div>
+</div>
