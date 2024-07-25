@@ -1,0 +1,39 @@
+---
+import { Image } from "astro:assets";
+import { type CatInfo } from "../types/cat-info";
+import male from "../assets/icons/male.svg";
+import female from "../assets/icons/female.svg";
+
+interface Props {
+  image: ImageMetadata;
+  alt: string;
+  catInfo: CatInfo;
+}
+
+const { image, alt, catInfo } = Astro.props;
+const { name, genre, localization } = catInfo;
+---
+
+<div class="flex flex-col relative">
+  <Image src={image} width={250} alt={alt} class={"object-contain"} />
+  <div class="flex flex-row gap-1 justify-start items-start p-1">
+    <Image
+      src={male}
+      width={42}
+      height={42}
+      alt={"Genero"}
+      class={"absolute bottom-12 shadow-2xl shadow-blue-600"}
+    />
+    <div class="flex flex-col gap-1 font-bold ml-12">
+      <small>
+        {name}
+      </small>
+      <small>
+        {genre} / Filhote
+      </small>
+      <small>
+        {localization}
+      </small>
+    </div>
+  </div>
+</div>
