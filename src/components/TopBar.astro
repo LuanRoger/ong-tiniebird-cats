@@ -1,7 +1,30 @@
 ---
-
+import { Image } from "astro:assets";
+import logo from "../assets/icons/logo.svg";
+import NavItem from "./NavItem.astro";
+import PrimaryButton from "./PrimaryButton.astro";
 ---
 
-<nav>
-    <h1>Hello Moto</h1>
-</nav>
+<div class="flex flex-row px-20 items-center gap-24">
+  <div class="flex flex-row items-center gap-2">
+    <Image
+      src={logo}
+      width={60}
+      height={80}
+      alt={"Logo da Ong TinieBird Cats"}
+    />
+    <h1>Ong TinieBird Cats</h1>
+  </div>
+  <nav>
+    <ul class="flex flex-row gap-9 items-center">
+      <NavItem text="Home" />
+      <NavItem text="Sobre" selected />
+      <NavItem text="Quero ajudar" />
+      <NavItem text="Notícias" />
+      <NavItem text="Contato" />
+    </ul>
+  </nav>
+  <PrimaryButton>
+    Quero adotar
+  </PrimaryButton>
+</div>

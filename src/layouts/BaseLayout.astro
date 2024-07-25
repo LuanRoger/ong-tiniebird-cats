@@ -1,4 +1,5 @@
 ---
+import "@fontsource/roboto";
 import "../styles/global.css";
 import TopBar from "../components/TopBar.astro";
 ---
@@ -12,9 +13,9 @@ import TopBar from "../components/TopBar.astro";
     <title>Ong TinieBird Cats</title>
   </head>
   <body>
-	<header>
-		<TopBar/>
-	</header>
+    <header class="p-2">
+      <TopBar />
+    </header>
     <slot />
   </body>
 </html>

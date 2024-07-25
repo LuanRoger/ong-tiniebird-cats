@@ -1,0 +1,20 @@
+---
+import { Image } from "astro:assets";
+import paw from "../assets/icons/paw.svg";
+
+interface Props {
+  text: string;
+  selected?: boolean | undefined;
+}
+
+const { text, selected } = Astro.props;
+---
+
+<li class="flex flex-row gap-1">
+  {
+    selected && (
+      <Image src={paw} width={20} height={20} alt={"Icone de seleção"} />
+    )
+  }
+  <h2 class={selected ? "text-[#FF8B87]" : ""}>{text}</h2>
+</li>

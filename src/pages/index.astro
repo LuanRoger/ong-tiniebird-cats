@@ -1,7 +1,12 @@
 ---
+import Advantages from "../components/Advantages.astro";
+import Banner from "../components/Banner.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout>
-  <h1 class="font-logo">Welcome to Astro</h1>
+	<main class="space-y-10">
+		<Banner/>
+		<Advantages/>
+	</main>
 </BaseLayout>
