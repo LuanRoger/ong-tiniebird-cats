@@ -1,0 +1,27 @@
+---
+import { Image } from "astro:assets";
+import bannerCat from "../assets/images/bannerCat.png";
+import elementLine from "../assets/icons/elementLine.svg";
+---
+
+<div class="flex flex-col bg-[#FFE1E0] items-center justify-center">
+  <div class="flex flex-row gap-5 w-full items-center">
+    <Image
+      src={elementLine}
+      width={200}
+      height={200}
+      alt={"Elemento decorativo"}
+    />
+    <div class="flex flex-row items-center">
+      <span
+        class="font-logo text-[#1A1442] text-5xl font-bold whitespace-nowrap"
+      >
+        <h1>Doe amor,</h1>
+        <h1>doe o seu lar!</h1>
+        <h1>Adote um gatinho</h1>
+      </span>
+      <Image src={bannerCat} width={800} height={500} alt={"Banner de gato"} />
+    </div>
+  </div>
+  <div class="inset-x-0 bottom-0">Carousel indicator placehold</div>
+</div>
