@@ -5,9 +5,11 @@ import paw from "../assets/icons/paw.svg";
 interface Props {
   text: string;
   selected?: boolean | undefined;
+  href?: string | undefined;
 }
 
-const { text, selected } = Astro.props;
+const { text, selected, href } = Astro.props;
+const hrefValue = href ?? "/";
 ---
 
 <li class="flex flex-row gap-1">
@@ -16,5 +18,9 @@ const { text, selected } = Astro.props;
       <Image src={paw} width={20} height={20} alt={"Icone de seleção"} />
     )
   }
-  <h2 class={selected ? "text-[#FF8B87]" : ""}>{text}</h2>
+  <h2 class={selected ? "text-[#FF8B87]" : ""}>
+    <a href={hrefValue}>
+      {text}
+    </a>
+  </h2>
 </li>
