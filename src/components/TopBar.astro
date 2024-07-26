@@ -1,11 +1,30 @@
 ---
+import { Image } from "astro:assets";
 import PrimaryButton from "./PrimaryButton.astro";
 import NavMenu from "./NavMenu.astro";
 import OngTbLogo from "./OngTbLogo.astro";
+import bottomEdge from "../assets/icons/topBarBottomEdge.svg";
 ---
 
-<div class="flex flex-row px-20 items-center gap-24">
-  <OngTbLogo />
-  <NavMenu />
-  <PrimaryButton> Quero adotar </PrimaryButton>
-</div>
+<header class="flex flex-col p-2 relative">
+  <div class="flex flex-row items-center justify-evenly">
+    <OngTbLogo />
+    <div class="flex flex-row gap-4 items-center">
+      <NavMenu />
+      <PrimaryButton>Quero adotar</PrimaryButton>
+    </div>
+  </div>
+  <div class="absolute inset-x-0 -bottom-8 -space-y-7 overflow-hidden">
+    <Image
+      src={bottomEdge}
+      alt={"Borda da barra principal"}
+      class={"z-10 min-w-[45rem] w-[45rem]"}
+    />
+    <Image
+      src={bottomEdge}
+      height={40}
+      alt={"Borda da barra principal"}
+      class={"opacity-55 z-0 min-w-[45rem] w-[45rem]"}
+    />
+  </div>
+</header>

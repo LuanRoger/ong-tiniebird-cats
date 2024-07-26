@@ -12,7 +12,7 @@ const { text, selected, href } = Astro.props;
 const hrefValue = href ?? "/";
 ---
 
-<li class="flex flex-row gap-1">
+<li class="flex flex-row gap-1 text-sm font-bold">
   {
     selected && (
       <Image src={paw} width={20} height={20} alt={"Icone de seleção"} />

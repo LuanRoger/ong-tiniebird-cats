@@ -1,11 +1,19 @@
 ---
 import { Image } from "astro:assets";
-import paw from "../assets/icons/paw.svg";
+import paw from "../assets/icons/white-paw.svg";
+
+interface Props {
+  class?: string | undefined;
+}
+const { class: classes } = Astro.props;
 ---
 
 <button
-  class="px-10 py-5 bg-[#1268AE] text-white rounded-md whitespace-nowrap flex flex-row gap-1 items-center justify-center"
+  class:list={[
+    "text-sm p-3 bg-[#1268AE] text-white rounded-md whitespace-nowrap flex flex-row gap-2 items-center justify-center",
+    classes,
+  ]}
 >
   <slot />
-  <Image src={paw} width={16} height={16} alt={"Pata"} class={"fill-white"} />
+  <Image src={paw} width={16} height={16} alt={"Pata"} />
 </button>
