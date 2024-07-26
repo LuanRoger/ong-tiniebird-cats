@@ -1,0 +1,52 @@
+---
+import type { CustomerTestimonial as CustomerTestimonialModel } from "../types/customer-testimonial";
+import CustomerTestimonial from "./CustomerTestimonial.astro";
+import person1 from "../assets/images/person1.jpg";
+import person2 from "../assets/images/person2.jpg";
+import quoteIcon from "../assets/icons/quote.svg";
+import { Image } from "astro:assets";
+
+const customer1Testimonial: CustomerTestimonialModel = {
+  name: "Laura",
+  role: "Tutora da Paçoca",
+  testimonial:
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pharetra tellus ut erat consequat auctor integer nulla nunc.",
+};
+const customer2Testimonial: CustomerTestimonialModel = {
+  name: "Rômulo",
+  role: "Tutor do Pantera",
+  testimonial:
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pharetra tellus ut erat consequat auctor integer nulla nunc.",
+};
+---
+
+<div class="relative">
+  <Image
+    src={quoteIcon}
+    width={300}
+    height={300}
+    alt={"Icone de citação"}
+    class={"absolute"}
+  />
+  <div class="flex flex-row items-center justify-between p-4">
+    <div class="flex flex-col text-[#1A1442]">
+      <h1 class="font-logo text-2xl">Depoimentos</h1>
+      <p class="text-sm">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pharetra
+        tellus ut erat consequat auctor integer nulla nunc.
+      </p>
+    </div>
+    <div class="flex flex-row items-center">
+      <CustomerTestimonial
+        image={person1}
+        alt="Pessoa abraçando um gato"
+        testimonialInfo={customer1Testimonial}
+      />
+      <CustomerTestimonial
+        image={person2}
+        alt="Pessoa abraçando um gato"
+        testimonialInfo={customer2Testimonial}
+      />
+    </div>
+  </div>
+</div>

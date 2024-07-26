@@ -1,0 +1,31 @@
+---
+import { Image } from "astro:assets";
+import type { CustomerTestimonial } from "../types/customer-testimonial";
+
+interface Props {
+  image: ImageMetadata;
+  alt: string;
+  testimonialInfo: CustomerTestimonial;
+}
+
+const { image, alt, testimonialInfo } = Astro.props;
+const { name, role, testimonial } = testimonialInfo;
+---
+
+<div
+  class="flex flex-col justify-center items-center shadow-2xl shadow-[#FFE7E7] w-72 rounded-lg
+  relative p-5"
+>
+  <div
+    class="rounded-full bg-gradient-to-b from-[#FF8B87] to-transparent absolute p-4 -top-12"
+  >
+    <Image src={image} alt={alt} class="object-cover w-20 h-20 rounded-full" />
+  </div>
+  <div class="flex flex-col justify-center items-center mt-16 gap-2">
+    <div class="flex flex-col justify-center items-center">
+      <h1 class="font-bold">{name}</h1>
+      <h2 class="font-light">{role}</h2>
+    </div>
+    <p class="font-light text-center text-sm">{testimonial}</p>
+  </div>
+</div>
