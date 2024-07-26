@@ -1,0 +1,29 @@
+---
+import { Image } from "astro:assets";
+import type { Genre } from "../types/cat-info";
+import male from "../assets/icons/male.svg";
+import female from "../assets/icons/female.svg";
+
+interface Props {
+  class?: string | undefined;
+  genre: Genre;
+}
+
+const { class: classes, genre } = Astro.props;
+const isMacho = genre === "Macho";
+---
+
+<div
+  class:list={[
+    "flex flex-col items-center justify-center p-2 rounded-2xl bg-[#1268AE]",
+    classes,
+  ]}
+>
+  <Image
+    src={isMacho ? male : female}
+    width={22}
+    height={22}
+    alt={"Genero"}
+    class={"shadow-2xl shadow-blue-600"}
+  />
+</div>

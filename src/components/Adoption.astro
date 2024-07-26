@@ -4,9 +4,11 @@ import cat1 from "../assets/images/cat1.png";
 import cat2 from "../assets/images/cat2.png";
 import cat3 from "../assets/images/cat3.png";
 import cat4 from "../assets/images/cat4.png";
+import border from "../assets/icons/adoptionBottomBorder.svg";
 import CatInfo from "./CatInfo.astro";
 import type { CatInfo as CatModel } from "../types/cat-info";
 import PrimaryButton from "./PrimaryButton.astro";
+import Combobox from "./Combobox.astro";
 
 const catInfo1: CatModel = {
   name: "Bolinha",
@@ -16,18 +18,24 @@ const catInfo1: CatModel = {
 ---
 
 <div
-  class="flex flex-col justify-stretch items-center gap-4 w-full py-4 bg-gradient-to-bl from-[#FF7B77] to-[#FFB0AD]"
+  class="flex flex-col justify-stretch items-center gap-4 w-full py-4 pb-14
+  bg-gradient-to-bl from-[#FF7B77] to-[#FFB0AD] relative"
 >
-  <div>
-    <h1 class="font-logo text-2xl text-white">Gatos para adoção</h1>
+  <h1 class="font-logo text-2xl text-white">Gatos para adoção</h1>
+  <div class="flex flex-row justify-evenly w-full gap-2 px-4">
+    <Combobox options={[["empty", "Estado"]]} />
+    <Combobox options={[["empty", "Cidade"]]} />
+    <Combobox options={[["empty", "Gênero"]]} />
+    <PrimaryButton>Buscar</PrimaryButton>
   </div>
-  <div class="flex flex-row justify-evenly overflow-x-auto">
+  <div class="flex flex-row justify-evenly flex-wrap">
     <CatInfo image={cat1} alt="Gatinho bunitiho" catInfo={catInfo1} />
     <CatInfo image={cat2} alt="Gatinho bunitiho" catInfo={catInfo1} />
     <CatInfo image={cat3} alt="Gatinho bunitiho" catInfo={catInfo1} />
     <CatInfo image={cat4} alt="Gatinho bunitiho" catInfo={catInfo1} />
   </div>
   <div>
-    <PrimaryButton> Ver todos </PrimaryButton>
+    <PrimaryButton variant="outline"> Ver todos </PrimaryButton>
   </div>
+  <Image src={border} alt={"Borda"} class={"absolute inset-x-0 -bottom-2"}>
 </div>

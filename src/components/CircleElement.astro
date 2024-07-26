@@ -6,11 +6,13 @@ interface Props {
 const { class: classes } = Astro.props;
 ---
 
-<div
-  class:list={[
-    "flex flex-col justify-center rounded-full grow-0 shrink-0 bg-[#FF8D8A] p-4 text-white text-center",
-    classes,
-  ]}
->
-  <slot />
+<div class="bg-[#ff8e8a7a] p-2 rounded-full">
+  <div
+    class:list={[
+      "flex flex-col justify-center rounded-full grow-0 shrink-0 bg-[#FF8D8A] p-4 text-white text-center",
+      classes,
+    ]}
+  >
+    <slot />
+  </div>
 </div>

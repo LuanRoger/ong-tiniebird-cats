@@ -1,0 +1,14 @@
+---
+interface Props {
+  options: [string, string][];
+}
+
+const { options } = Astro.props;
+---
+
+<select
+  class="border border-white rounded-md grow
+bg-transparent text-white text-sm font-sans p-1"
+>
+  {options.map(([value, label]) => <option value={value}>{label}</option>)}
+</select>

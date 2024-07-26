@@ -2,15 +2,23 @@
 import { Image } from "astro:assets";
 import paw from "../assets/icons/white-paw.svg";
 
+type ButtonVariant = "primary" | "outline";
+
 interface Props {
   class?: string | undefined;
+  variant?: ButtonVariant;
 }
-const { class: classes } = Astro.props;
+const { class: classes, variant } = Astro.props;
+
+const variantValue = variant ?? "primary";
+const primaryClasses = "bg-[#1268AE]";
+const outlineClasses = "border-2 border-white";
 ---
 
 <button
   class:list={[
-    "text-sm p-3 bg-[#1268AE] text-white rounded-md whitespace-nowrap flex flex-row gap-2 items-center justify-center",
+    "text-sm p-3 text-white rounded-md whitespace-nowrap flex flex-row gap-2 items-center justify-center",
+    variantValue === "primary" ? primaryClasses : outlineClasses,
     classes,
   ]}
 >
