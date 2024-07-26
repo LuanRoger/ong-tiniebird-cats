@@ -1,0 +1,19 @@
+---
+import { Image } from "astro:assets";
+import pattern1 from "../assets/images/pattern1.png";
+import pattern2 from "../assets/images/pattern2.png";
+import pattern3 from "../assets/images/pattern3.png";
+import pattern4 from "../assets/images/pattern4.png";
+import pattern5 from "../assets/images/pattern5.png";
+---
+
+<div class="flex flex-col gap-10">
+    <h1 class="font-logo text-2xl text-[#1A1442] self-center">Nossos Parceiros</h1>
+    <div class="flex flex-row flex-wrap justify-evenly">
+        <Image src={pattern1} width={150} height={150} alt={"Logo da Petlove"} />
+        <Image src={pattern2} width={150} height={150} alt={"Logo da Whiskas"} />
+        <Image src={pattern3} width={150} height={150} alt={"Logo da Royal Canin"} />
+        <Image src={pattern4} width={150} height={150} alt={"Logo da Golden"} />
+        <Image src={pattern5} width={150} height={150} alt={"Logo da Premier Pet"} />
+    </div>
+</div>
