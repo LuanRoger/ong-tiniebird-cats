@@ -13,7 +13,7 @@ interface Props {
 const { image, alt, side } = Astro.props;
 ---
 
-<div class="flex flex-row gap-2 items-center w-10 h-5">
+<div class="flex flex-row gap-2 items-center">
   {
     side === "left" && (
       <p>
@@ -22,7 +22,7 @@ const { image, alt, side } = Astro.props;
     )
   }
   <CircleElement>
-    <Image src={image} width={32} height={32} alt={alt} />
+    <Image src={image} width={16} height={16} alt={alt} />
   </CircleElement>
   {
     side === "right" && (

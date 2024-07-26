@@ -1,0 +1,69 @@
+---
+import { Image } from "astro:assets";
+import CircleElement from "./CircleElement.astro";
+import TextBox from "./TextBox.astro";
+import logo from "../assets/icons/whiteLogo.svg";
+import paw from "../assets/icons/white-paw.svg";
+import TextElementImage from "./TextElementImage.astro";
+import funnyCat from "../assets/icons/funnyCat.svg";
+import PrimaryButton from "./PrimaryButton.astro";
+import food from "../assets/icons/catFood.svg";
+import give from "../assets/icons/giveCute.svg";
+import scissor from "../assets/icons/scissor.svg";
+---
+
+<div class="flex flex-col gap-14 w-full">
+  <div class="flex flex-col gap-4">
+    <TextBox> Apoie e faça a sua parte </TextBox>
+    <h1 class="font-logo text-2xl text-center text-[#1A1442]">
+      Apoie e colabore para que mais gatinhos encontre uma família
+    </h1>
+  </div>
+  <div class="flex flex-row justify-evenly">
+    <div class="flex flex-col justify-between items-end">
+      <TextElementImage
+        image={funnyCat}
+        alt="Icone de gato brincando"
+        side="left"
+      >
+        <strong>+1.2 mil</strong> gatinhos adotados em 2024
+      </TextElementImage>
+      <TextElementImage
+        image={food}
+        alt="Icone de gato brincando"
+        side="left"
+      >
+        <strong>+80 toneladas</strong> de ração doadas desde 2023
+      </TextElementImage>
+    </div>
+    <CircleElement class="h-auto w-60">
+      <div class="flex flex-col items-center justify-center gap-3">
+        <Image src={logo} width={50} height={50} alt={"Logo"} />
+        <span
+          >Mais de <strong>5.4mil gatinhos adotados</strong> desde 2016 em todo o
+          Brasil.</span
+        >
+        <Image src={paw} width={60} height={60} alt={"Pata de gato"} />
+      </div>
+    </CircleElement>
+    <div class="flex flex-col justify-between items-start">
+      <TextElementImage
+        image={give}
+        alt="Icone de gato brincando"
+        side="right"
+      >
+      <strong>+305 protetores</strong> apoiados durante o ano
+      </TextElementImage>
+      <TextElementImage
+        image={scissor}
+        alt="Icone de gato brincando"
+        side="right"
+      >
+      <strong>+2.1</strong> castrações de gatos realizadas
+      </TextElementImage>
+    </div>
+  </div>
+  <div class="self-center">
+    <PrimaryButton>Apoie agora mesmo</PrimaryButton>
+  </div>
+</div>
