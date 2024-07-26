@@ -5,27 +5,29 @@ import elementLine from "../assets/icons/elementLine.svg";
 import PrimaryButton from "./PrimaryButton.astro";
 ---
 
-<div class="flex flex-col bg-[#FFE1E0] items-center justify-center">
-  <div class="flex flex-row gap-5 w-full items-center">
+<div class="flex flex-col bg-[#FFE1E0] h-96">
+  <div class="relative w-full h-full">
     <Image
       src={elementLine}
+      alt={"Linha"}
       width={200}
-      height={200}
-      alt={"Elemento decorativo"}
+      class={"absolute inset-y-0 left-10 h-full"}
     />
-    <div class="flex flex-row items-center">
-      <div class="flex flex-col gap-5">
-        <span
-          class="font-logo text-[#1A1442] text-5xl font-bold whitespace-nowrap"
-        >
-          <h1>Doe amor,</h1>
-          <h1>doe o seu lar!</h1>
-          <h1>Adote um gatinho</h1>
-        </span>
-        <PrimaryButton> Quero Adotar </PrimaryButton>
-      </div>
-      <Image src={bannerCat} width={100} height={100} alt={"Banner de gato"} />
+    <Image
+      src={bannerCat}
+      alt={"Gato"}
+      width={600}
+      class={"absolute inset-y-0 right-[15%] h-full object-contain"}
+    />
+    <div class="flex flex-col justify-center items-start h-full gap-4 mx-52 z-10 absolute">
+      <span
+        class="font-logo text-[#1A1442] text-3xl leading-none font-bold whitespace-nowrap"
+      >
+        <h1>Doe amor,</h1>
+        <h1>doe o seu lar!</h1>
+        <h1>Adote um gatinho</h1>
+      </span>
+      <PrimaryButton> Quero Adotar </PrimaryButton>
     </div>
   </div>
-  <div class="inset-x-0 bottom-0">Carousel indicator placehold</div>
 </div>
