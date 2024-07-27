@@ -2,25 +2,46 @@
 import { Image } from "astro:assets";
 import paw from "../assets/icons/white-paw.svg";
 
-type ButtonVariant = "primary" | "outline";
+type ButtonVariant = "primary" | "secondary" | "outline";
 
 interface Props {
   class?: string | undefined;
   variant?: ButtonVariant;
+  type?: "submit" | "reset" | "button" | undefined | null;
 }
-const { class: classes, variant } = Astro.props;
+const { class: classes, variant, type } = Astro.props;
 
 const variantValue = variant ?? "primary";
 const primaryClasses = "bg-[#1268AE]";
-const outlineClasses = "border-2 border-white transition-colors hover:text-black hover:bg-white";
+const secondaryClasses = "bg-[#014C87]";
+const outlineClasses =
+  "border-2 border-white transition-colors hover:text-black hover:bg-white";
+
+const typeValue = type ?? "button";
+let classValue;
+switch (variantValue) {
+  case "primary":
+    classValue = primaryClasses;
+    break;
+  case "secondary":
+    classValue = secondaryClasses;
+    break;
+  case "outline":
+    classValue = outlineClasses;
+    break;
+  default:
+    classValue = primaryClasses;
+    break;
+}
 ---
 
 <button
   class:list={[
     "text-sm p-3 text-white rounded-md whitespace-nowrap flex flex-row gap-2 items-center justify-center",
-    variantValue === "primary" ? primaryClasses : outlineClasses,
+    classValue,
     classes,
   ]}
+  type={typeValue}
 >
   <slot />
   <Image src={paw} width={16} height={16} alt={"Pata"} />

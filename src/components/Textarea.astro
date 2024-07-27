@@ -1,0 +1,16 @@
+---
+interface Props {
+  name: string;
+  placeholder: string;
+  required?: boolean;
+}
+
+const { name, placeholder, required } = Astro.props;
+---
+
+<textarea
+  name={name}
+  placeholder={placeholder}
+  required={required}
+  class="bg-transparent p-4 rounded-md border border-white text-white placeholder:text-white"
+></textarea>
