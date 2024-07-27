@@ -10,7 +10,7 @@ import SocialRow from "./SocialRow.astro";
 import NewsletterSubscription from "./NewsletterSubscription.astro";
 ---
 
-<div class="relative h-[65rem]">
+<div class="relative sm:max-md:h-[80rem] h-[65rem]">
   <div class="flex flex-col -z-10 absolute w-full h-full">
     <Image
       src={formRectangle}
@@ -20,7 +20,7 @@ import NewsletterSubscription from "./NewsletterSubscription.astro";
     />
     <div class="bg-[#E7807D] w-full h-full"></div>
   </div>
-  <div>
+  <div class="sm:max-md:hidden">
     <Image
       src={formCat}
       alt={"Gato do formulário"}
@@ -47,7 +47,7 @@ import NewsletterSubscription from "./NewsletterSubscription.astro";
       class={"absolute inset-y-[40%] right-10 z-30"}
     />
   </div>
-  <div class="flex flex-col absolute left-0 top-14 ml-10 w-full gap-4">
+  <div class="flex flex-col absolute left-0 top-14 px-10 w-full gap-4">
     <span class="text-white text-3xl font-logo">
       <p>Fale conosco</p>
       <p>agora mesmo</p>

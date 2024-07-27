@@ -10,7 +10,7 @@ interface Props {
 const { class: classes } = Astro.props;
 ---
 
-<form class:list={["flex flex-col gap-2 w-1/3 justify-center", classes]}>
+<form class:list={["flex flex-col gap-2 md:max-2xl:w-1/3 justify-center", classes]}>
   <Input type="text" name="name" placeholder="Nome" required />
   <Input type="email" name="email" placeholder="Email" required />
   <Input type="tel" name="phone" placeholder="Celular" />
