@@ -1,0 +1,17 @@
+---
+import Input from "./Input.astro";
+import paperPlane from "../assets/icons/paperPlane.svg";
+import IconButton from "./IconButton.astro";
+
+---
+
+<div class="flex flex-col gap-4 justify-center items-center text-white">
+    <div class="flex flex-col gap-2 items-center">
+        <h1 class="font-bold text-xl">Newsletter</h1>
+        <p>Quer receber nossas dicas e novidades? Cadastre-se agora</p>
+    </div>
+    <div class="inline-flex gap-3 items-center justify-center w-full">
+        <Input name="email" placeholder="Digite seu email" class="grow max-w-72" />
+        <IconButton image={paperPlane} alt="Enviar email" />
+    </div>
+</div>

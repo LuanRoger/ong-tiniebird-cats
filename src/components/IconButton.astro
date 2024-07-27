@@ -1,0 +1,14 @@
+---
+import { Image } from "astro:assets";
+interface Props {
+  image: ImageMetadata;
+  alt: string;
+  class?: string | undefined;
+}
+
+const { image, alt, class: classes } = Astro.props;
+---
+
+<button class:list={["bg-[#FFE7E6] rounded-md p-2 max-w-10 max-h-10", classes]}>
+  <Image src={image} width={20} height={20} alt={alt} />
+</button>

@@ -1,0 +1,29 @@
+---
+import { Image } from "astro:assets";
+
+interface Props {
+  image: ImageMetadata;
+  alt: string;
+  title: string;
+  subtitle?: string | undefined;
+  class?: string | undefined;
+}
+
+const { image, alt, title, subtitle, class: classes } = Astro.props;
+---
+
+<div
+  class:list={[
+    "flex flex-col justify-center items-center text-white gap-4 max-w-60 rounded-md p-4",
+    classes,
+  ]}
+>
+  <div
+    class="flex flex-col justify-center items-center gap-2 font-bold text-lg"
+  >
+    <Image src={image} alt={alt} width={32} height={32} />
+    <h1>{title}</h1>
+  </div>
+  {subtitle && <p class="text-sm text-center">{subtitle}</p>}
+  <slot />
+</div>

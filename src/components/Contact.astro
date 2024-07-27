@@ -6,15 +6,17 @@ import element from "../assets/icons/elementArrow.svg";
 import elementLine from "../assets/icons/elementLine2.svg";
 import elementLine2 from "../assets/icons/elementLine3.svg";
 import formRectangle from "../assets/icons/formRectangle.svg";
+import SocialRow from "./SocialRow.astro";
+import NewsletterSubscription from "./NewsletterSubscription.astro";
 ---
 
-<div class="relative h-[60rem]">
+<div class="relative h-[65rem]">
   <div class="flex flex-col -z-10 absolute w-full h-full">
     <Image
       src={formRectangle}
       height={700}
       alt={"Elemento ratangular do formulario"}
-      class={"w-full inset-x-0 top-0"}
+      class={"w-full inset-x-0 top-0 -z-40"}
     />
     <div class="bg-[#E7807D] w-full h-full"></div>
   </div>
@@ -30,7 +32,7 @@ import formRectangle from "../assets/icons/formRectangle.svg";
       src={element}
       alt={"Elemento decorativo"}
       height={800}
-      class={"absolute inset-y-0 right-0 z-10"}
+      class={"absolute inset-y-0 right-0 -z-10"}
     />
     <Image
       src={elementLine}
@@ -51,5 +53,9 @@ import formRectangle from "../assets/icons/formRectangle.svg";
       <p>agora mesmo</p>
     </span>
     <ContactForm />
+  </div>
+  <div class="flex flex-col w-full absolute inset-x-0 bottom-10 gap-10">
+    <SocialRow/>
+    <NewsletterSubscription/>
   </div>
 </div>

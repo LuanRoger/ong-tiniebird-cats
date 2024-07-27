@@ -6,9 +6,10 @@ interface Props {
   placeholder: string;
   type?: InputType;
   required?: boolean;
+  class?: string | undefined;
 }
 
-const { name, placeholder, type, required } = Astro.props;
+const { name, placeholder, type, required, class: classes } = Astro.props;
 ---
 
 <input
@@ -17,5 +18,8 @@ const { name, placeholder, type, required } = Astro.props;
   id={name}
   placeholder={placeholder}
   required={required}
-  class="bg-transparent p-4 rounded-md border border-white text-white placeholder:text-white"
+  class:list={[
+    "bg-transparent p-4 rounded-md border border-white text-white placeholder:text-white",
+    classes,
+  ]}
 />

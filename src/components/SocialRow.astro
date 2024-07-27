@@ -1,0 +1,48 @@
+---
+import SocialCard from "./SocialCard.astro";
+import emailIcon from "../assets/icons/email.svg";
+import heart from "../assets/icons/heart.svg";
+import zap from "../assets/icons/zap.svg";
+import instaIcon from "../assets/icons/insta.svg";
+import faceIcon from "../assets/icons/facebook.svg";
+import playStoreIcon from "../assets/icons/playStore.svg";
+import { Image } from "astro:assets";
+---
+
+<div class="flex flex-row flex-wrap justify-evenly">
+  <SocialCard
+    image={emailIcon}
+    alt="Icone de email"
+    title="Por e-mail"
+    subtitle="Envie a sua mensagem e responderemos em até 2 dias úteis"
+  >
+    <a href="mailto:contato@ongtiniebirdcats.com.br" class="underline"
+      >contato@ongtiniebirdcats.com.br</a
+    >
+  </SocialCard>
+  <SocialCard
+    image={zap}
+    alt="Icone do Whatsapp"
+    title="Por Whatsapp"
+    class="bg-[#1168AD]"
+  >
+    <a class="underline">Chame no (13) 91234-5678</a>
+  </SocialCard>
+  <SocialCard
+    image={heart}
+    alt="Coração"
+    title="Redes sociais"
+    subtitle="Utilize nossas redes para entrar em contato conosco!"
+  >
+    <div class="flex flex-row justify-center gap-1">
+      <Image src={instaIcon} alt="Icone do Instagram" width={32} height={32} />
+      <Image src={faceIcon} alt="Icone do Instagram" width={32} height={32} />
+      <Image
+        src={playStoreIcon}
+        alt="Icone do Instagram"
+        width={32}
+        height={32}
+      />
+    </div>
+  </SocialCard>
+</div>
