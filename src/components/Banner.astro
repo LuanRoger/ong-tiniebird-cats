@@ -11,7 +11,7 @@ import PrimaryButton from "./PrimaryButton.astro";
       src={elementLine}
       alt={"Linha"}
       width={200}
-      class={"absolute inset-y-0 left-0 h-full"}
+      class={"absolute inset-y-0 left-0 h-full hidden sm:max-md:hidden"}
     />
     <Image
       src={bannerCat}
@@ -19,7 +19,8 @@ import PrimaryButton from "./PrimaryButton.astro";
       width={600}
       class={"absolute inset-y-0 right-0 object-contain sm:max-md:hidden"}
     />
-    <div class="flex flex-col justify-center items-start h-full gap-4 mx-52">
+    <div class="flex flex-col justify-center items-center 
+    md:max-2xl:items-start h-full gap-4 md:max-2xl:mx-52">
       <span
         class="font-logo text-[#1A1442] text-3xl leading-none font-bold whitespace-nowrap"
       >

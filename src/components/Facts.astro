@@ -19,8 +19,8 @@ import scissor from "../assets/icons/scissor.svg";
       Apoie e colabore para que mais gatinhos encontre uma família
     </h1>
   </div>
-  <div class="flex flex-row justify-evenly">
-    <div class="flex flex-col justify-between items-end">
+  <div class="flex flex-row sm:max-md:flex-col justify-evenly sm:max-md:items-center">
+    <div class="flex flex-col justify-between items-end sm:max-md:hidden">
       <TextElementImage
         image={funnyCat}
         alt="Icone de gato brincando"
@@ -46,7 +46,23 @@ import scissor from "../assets/icons/scissor.svg";
         <Image src={paw} width={60} height={60} alt={"Pata de gato"} />
       </div>
     </CircleElement>
-    <div class="flex flex-col justify-between items-start">
+    <div class="flex flex-col justify-between items-end md:max-2xl:hidden gap-2">
+      <TextElementImage
+        image={funnyCat}
+        alt="Icone de gato brincando"
+        side="left"
+      >
+        <strong>+1.2 mil</strong> gatinhos adotados em 2024
+      </TextElementImage>
+      <TextElementImage
+        image={food}
+        alt="Icone de gato brincando"
+        side="left"
+      >
+        <strong>+80 toneladas</strong> de ração doadas desde 2023
+      </TextElementImage>
+    </div>
+    <div class="flex flex-col justify-between items-start gap-2">
       <TextElementImage
         image={give}
         alt="Icone de gato brincando"

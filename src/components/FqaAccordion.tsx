@@ -44,7 +44,7 @@ function AccordionTrigger({ children }: { children: React.ReactNode }) {
   return (
     <Accordion.Header className="flex">
       <Accordion.Trigger
-        className="text-[#1A1442] group flex h-16 
+        className="text-[#1A1442] text-start group flex h-16 
       flex-1 cursor-default items-center justify-between 
       bg-white px-5 leading-none outline-none"
       >

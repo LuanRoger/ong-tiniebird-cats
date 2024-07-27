@@ -22,7 +22,7 @@ export default function MobileNavMenu() {
           data-[state=open]:data-[side=bottom]:animate-slideUpAndFade 
           data-[state=open]:data-[side=left]:animate-slideRightAndFade"
         >
-          <div className="flex flex-col">
+          <div className="flex flex-col gap-2">
             <nav className="flex flex-col gap-2 items-start">
               <NavItem text="Home" />
               <NavItem text="Sobre" selected />
@@ -55,13 +55,16 @@ function NavItem({
 }) {
   const hrefValue = href ?? "/";
   return (
-    <li className="flex flex-row gap-1 text-sm font-bold hover:bg-[#ffccca88] w-full">
-      {selected && (
-        <img src={paw.src} width={20} height={20} alt={"Icone de seleção"} />
-      )}
-      <h2 className={selected ? "text-[#FF8B87]" : ""}>
-        <a href={hrefValue}>{text}</a>
-      </h2>
-    </li>
+    <a
+      href={hrefValue}
+      className="text-sm rounded-lg p-2 font-bold hover:bg-[#ffccca88] w-full"
+    >
+      <li className="flex flex-row gap-1">
+        {selected && (
+          <img src={paw.src} width={20} height={20} alt={"Icone de seleção"} />
+        )}
+        <h2 className={selected ? "text-[#FF8B87]" : ""}>{text}</h2>
+      </li>
+    </a>
   );
 }
