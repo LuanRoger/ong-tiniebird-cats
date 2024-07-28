@@ -35,7 +35,7 @@ function AccordionItem({
         "mt-px overflow-hidden first:mt-0 first:rounded-t last:rounded-b"
       }
     >
-      {children}
+      <p>{children}</p>
     </Accordion.Item>
   );
 }
@@ -48,10 +48,11 @@ function AccordionTrigger({ children }: { children: React.ReactNode }) {
       flex-1 cursor-default items-center justify-between 
       bg-white px-5 leading-none outline-none"
       >
-        {children}
+        <h1>{children}</h1>
         <div className="bg-[#FFE7E6] rounded-sm">
           <img
             src={arrow.src}
+            alt="Seta de expansão"
             className="w-5 h-5 ease-[cubic-bezier(0.87,_0,_0.13,_1)] transition-transform 
         duration-300 group-data-[state=open]:rotate-180"
           />

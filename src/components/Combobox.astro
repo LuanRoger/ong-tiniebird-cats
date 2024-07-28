@@ -1,12 +1,15 @@
 ---
 interface Props {
+  id: string;
+  label: string;
   options: [string, string][];
 }
 
-const { options } = Astro.props;
+const { id, label, options } = Astro.props;
 ---
 
-<select
+<label for={id} class="sr-only">{label}</label>
+<select id={id}
   class="border border-white rounded-md grow
 bg-transparent text-white text-sm font-sans p-1"
 >

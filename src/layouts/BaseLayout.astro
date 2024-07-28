@@ -10,10 +10,16 @@ import TopBar from "../components/TopBar.astro";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
+    <meta
+      name="description"
+      content="Um olhar, um ronronar, uma amizade para a vida toda. Abrace a companhia de um gato e faça a diferença na vida dele e na sua."
+    />
     <title>Ong TinieBird Cats</title>
   </head>
   <body>
-    <TopBar />
+    <header>
+      <TopBar />
+    </header>
     <slot />
   </body>
 </html>

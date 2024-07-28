@@ -12,7 +12,7 @@ export default function MobileNavMenu() {
           className="rounded-lg bg-[#FFE7E6] p-2 inline-flex items-center justify-center"
           aria-label="Update dimensions"
         >
-          <img src={menuIcon.src} width={16} height={16} />
+          <img src={menuIcon.src} width={16} height={16} alt="Ícone de menu" />
         </button>
       </Popover.Trigger>
       <Popover.Portal>
@@ -53,7 +53,7 @@ function NavItem({
   selected?: boolean | undefined;
   href?: string | undefined;
 }) {
-  const hrefValue = href ?? "/";
+  const hrefValue = href ?? "/ong-tiniebird-cats";
   return (
     <a
       href={hrefValue}
@@ -61,7 +61,7 @@ function NavItem({
     >
       <li className="flex flex-row gap-1">
         {selected && (
-          <img src={paw.src} width={20} height={20} alt={"Icone de seleção"} />
+          <img src={paw.src} width={20} height={20} alt={"Ícone de seleção"} />
         )}
         <h2 className={selected ? "text-[#FF8B87]" : ""}>{text}</h2>
       </li>

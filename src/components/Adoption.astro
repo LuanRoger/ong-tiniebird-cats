@@ -23,9 +23,9 @@ const catInfo1: CatModel = {
 >
   <h1 class="font-logo text-2xl text-white">Gatos para adoção</h1>
   <div class="flex flex-row justify-evenly w-full gap-2 px-4">
-    <Combobox options={[["empty", "Estado"]]} />
-    <Combobox options={[["empty", "Cidade"]]} />
-    <Combobox options={[["empty", "Gênero"]]} />
+    <Combobox id="cbb-estado" label="Estado" options={[["empty", "Estado"]]} />
+    <Combobox id="cbb-cidade" label="Cidade" options={[["empty", "Cidade"]]} />
+    <Combobox id="cbb-genero" label="Gênero" options={[["empty", "Gênero"]]} />
     <PrimaryButton>Buscar</PrimaryButton>
   </div>
   <div class="flex flex-row justify-evenly flex-wrap">

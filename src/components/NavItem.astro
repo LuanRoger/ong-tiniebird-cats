@@ -9,13 +9,13 @@ interface Props {
 }
 
 const { text, selected, href } = Astro.props;
-const hrefValue = href ?? "/";
+const hrefValue = href ?? "/ong-tiniebird-cats";
 ---
 
 <li class="flex flex-row gap-1 text-sm font-bold">
   {
     selected && (
-      <Image src={paw} width={20} height={20} alt={"Icone de seleção"} />
+      <Image src={paw} width={20} height={20} alt={"Ícone de seleção"} />
     )
   }
   <h2 class={selected ? "text-[#FF8B87]" : ""}>
