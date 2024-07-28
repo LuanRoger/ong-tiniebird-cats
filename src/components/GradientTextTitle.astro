@@ -1,0 +1,20 @@
+---
+interface Props {
+  class?: string | undefined;
+}
+
+const { class: classes } = Astro.props;
+---
+
+<div
+  class:list={[
+    "p-2 bg-gradient-to-r from-[#1250AE] to-transparent rounded-md",
+    classes,
+  ]}
+>
+  <div
+    class="p-2 font-logo text-2xl bg-[#1268AE] text-white text-center rounded-md"
+  >
+    <slot />
+  </div>
+</div>

@@ -1,0 +1,58 @@
+---
+import { Image } from "astro:assets";
+import cat from "../assets/images/historyCat.png";
+import GradientTextTitle from "./GradientTextTitle.astro";
+import HistoryMark from "./HistoryMark.astro";
+import paw from "../assets/icons/white-paw.svg";
+import petAdoptIcon from "../assets/icons/petAdopt.svg";
+import catIcon from "../assets/icons/catIcon.svg";
+---
+
+<div class="flex flex-col gap-4">
+  <div class="flex flex-col justify-center items-center text-center mx-10">
+    <h1 class="font-logo text-2xl">Conheça a ONG TinieBird Cats</h1>
+    <p class="text-sm">
+      Existem muitos <strong>gatos a espera de um lar</strong> e com muito amor para
+      oferecer. Nós fazemos essa ponte para que você adote um amigo e faça a diferença
+      na vida de um animal carente.
+    </p>
+  </div>
+  <div class="flex flex-row items-stretch gap-4">
+    <Image src={cat} alt="Gato deitado em um sofá" class={"w-1/2 sm:max-md:hidden"} />
+    <div class="flex flex-col items-start sm:max-md:px-4 sm:max-md:gap-2 justify-evenly flex-1">
+      <GradientTextTitle class="self-center"> Como Tudo Começou </GradientTextTitle>
+      <HistoryMark
+        circleImage={paw}
+        circleImageAlt="Pata de gato"
+        year="2016"
+        descriptionImage={petAdoptIcon}
+        descriptionImageAlt="Ícone de adoção de animais"
+        description="Primeira Adoção Independente"
+      />
+      <HistoryMark
+        circleImage={paw}
+        circleImageAlt="Pata de gato"
+        year="2017"
+        descriptionImage={catIcon}
+        descriptionImageAlt="Ícone de adoção de animais"
+        description="Lorem ipsum dolor sit amet"
+      />
+      <HistoryMark
+        circleImage={paw}
+        circleImageAlt="Pata de gato"
+        year="2018"
+        descriptionImage={petAdoptIcon}
+        descriptionImageAlt="Ícone de adoção de animais"
+        description="Primeira Adoção Independente"
+      />
+      <HistoryMark
+        circleImage={paw}
+        circleImageAlt="Pata de gato"
+        year="2019"
+        descriptionImage={catIcon}
+        descriptionImageAlt="Ícone de adoção de animais"
+        description="Lorem ipsum dolor sit amet"
+      />
+    </div>
+  </div>
+</div>
