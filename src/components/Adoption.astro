@@ -11,9 +11,24 @@ import PrimaryButton from "./PrimaryButton.astro";
 import Combobox from "./Combobox.astro";
 
 const catInfo1: CatModel = {
-  name: "Bolinha",
+  name: "Zion",
   genre: "Fêmea",
-  localization: "São Paulo - SP",
+  localization: "Guarulhos, São Paulo SP",
+};
+const catInfo2: CatModel = {
+  name: "Milk",
+  genre: "Fêmea",
+  localization: "Tiete, São Paulo SP",
+};
+const catInfo3: CatModel = {
+  name: "Tini",
+  genre: "Fêmea",
+  localization: "Osasco, São Paulo SP",
+};
+const catInfo4: CatModel = {
+  name: "Bird",
+  genre: "Fêmea",
+  localization: "Cotia, São Paulo SP",
 };
 ---
 
@@ -30,9 +45,9 @@ const catInfo1: CatModel = {
   </div>
   <div class="flex flex-row justify-evenly flex-wrap">
     <CatInfo image={cat1} alt="Gatinho bunitiho" catInfo={catInfo1} />
-    <CatInfo image={cat2} alt="Gatinho bunitiho" catInfo={catInfo1} />
-    <CatInfo image={cat3} alt="Gatinho bunitiho" catInfo={catInfo1} />
-    <CatInfo image={cat4} alt="Gatinho bunitiho" catInfo={catInfo1} />
+    <CatInfo image={cat2} alt="Gatinho bunitiho" catInfo={catInfo2} />
+    <CatInfo image={cat3} alt="Gatinho bunitiho" catInfo={catInfo3} />
+    <CatInfo image={cat4} alt="Gatinho bunitiho" catInfo={catInfo4} />
   </div>
   <div>
     <PrimaryButton variant="outline"> Ver todos </PrimaryButton>
