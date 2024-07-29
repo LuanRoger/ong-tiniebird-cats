@@ -1,27 +1,27 @@
 @font-face {
   font-family: "SF New Republic";
-  src: url("/fonts/SFNewRepublic.woff2") format('woff2');
+  src: url("../assets/fonts/SFNewRepublic.woff2") format('woff2');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "SF New Republic";
-  src: url("/fonts/SFNewRepublic-Bold.woff2") format('woff2');
+  src: url("../assets/fonts/SFNewRepublic-Bold.woff2") format('woff2');
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "SF New Republic";
-  src: url('/fonts/SFNewRepublic-BoldItalic.woff2') format('woff2');
+  src: url('../assets/fonts/SFNewRepublic-BoldItalic.woff2') format('woff2');
   font-weight: bold;
   font-style: italic;
   font-display: swap;
 }
 @font-face {
   font-family: "SF New Republic";
-  src: url('/fonts/SFNewRepublic-Italic.woff2') format('woff2');
+  src: url('../assets/fonts/SFNewRepublic-Italic.woff2') format('woff2');
   font-weight: normal;
   font-style: italic;
   font-display: swap;
