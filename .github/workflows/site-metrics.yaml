@@ -10,7 +10,7 @@ jobs:
       - name: Generate speed metrics
         uses: lowlighter/metrics@latest
         with:
-            filename: speed-metrics.svg
+            filename: images/speed-metrics.svg
             token: NOT_NEEDED
             base: ""
             config_timezone: America/Fortaleza
