@@ -1,6 +1,6 @@
 # [Ong TinieBird Cats](https://luanroger.github.io/ong-tiniebird-cats/)
 
-![Main screenshot]()
+![Main screenshot](https://github.com/LuanRoger/ong-tiniebird-cats/blob/main/images/main-image.png)
 
 Projeto desenvolvido para um desafio da KBR TEC para um vaga de estágio.
 
@@ -23,8 +23,8 @@ Projeto desenvolvido para um desafio da KBR TEC para um vaga de estágio.
 
 ## 💪 Resultado
 
-![Demo gif]()
-![Performance metrics]()
+### [Vídeo](https://github.com/user-attachments/assets/e8d465a3-d1a3-4e26-8b5a-5dc947c45bce)
+![Performance metrics](https://github.com/LuanRoger/ong-tiniebird-cats/blob/main/speed-metrics.svg)
 
 ## 🚀 Como executar
 
