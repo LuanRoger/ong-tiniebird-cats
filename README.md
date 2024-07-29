@@ -24,7 +24,7 @@ Projeto desenvolvido para um desafio da KBR TEC para um vaga de estágio.
 ## 💪 Resultado
 
 ### [Vídeo](https://github.com/user-attachments/assets/e8d465a3-d1a3-4e26-8b5a-5dc947c45bce)
-![Performance metrics](https://github.com/LuanRoger/ong-tiniebird-cats/blob/main/speed-metrics.svg)
+![Performance metrics](https://github.com/LuanRoger/ong-tiniebird-cats/blob/main/images/speed-metrics.svg)
 
 ## 🚀 Como executar
 
