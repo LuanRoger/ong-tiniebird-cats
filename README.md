@@ -2,8 +2,6 @@
 
 ![Main screenshot](https://github.com/LuanRoger/ong-tiniebird-cats/blob/main/images/main-image.png)
 
-Projeto desenvolvido para um desafio da KBR TEC para um vaga de estágio.
-
 ## 🛠️ Tecnologias
 
 - [Astro](https://astro.build)
